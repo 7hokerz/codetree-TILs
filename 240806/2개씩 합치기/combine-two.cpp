@@ -2,9 +2,11 @@
 #include <functional>
 #include <queue>
 using namespace std;
+typedef long long ll;
 
-int N, inp, ret = 0;
-priority_queue <int, vector<int>, greater<int>> pq;
+int N;
+ll inp, ret = 0;
+priority_queue <ll, vector<ll>, greater<ll>> pq;
 
 int main(){ cin.tie(0)->sync_with_stdio(0); cout.tie(0);
     cin >> N;
@@ -14,7 +16,7 @@ int main(){ cin.tie(0)->sync_with_stdio(0); cout.tie(0);
     }
     
     while(pq.size() > 1){
-        int one, two;
+        ll one, two;
         one = pq.top(); pq.pop();
         two = pq.top(); pq.pop();
 

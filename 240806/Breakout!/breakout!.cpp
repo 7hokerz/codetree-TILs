@@ -7,7 +7,7 @@ int main(){ cin.tie(0)->sync_with_stdio(0); cout.tie(0);
     cin >> N;
     for(int i = 1;i<N+1;i++){
         cin >> arr[i];
-        if(arr[i] != -1 && arr[i-1] == -1){
+        if(arr[i] != -1 && arr[i] && arr[i-1] == -1){
             int j = i - 1;
             while(arr[j] == -1 && j >= 1){
                 arr[j] = arr[j + 1] - 1;

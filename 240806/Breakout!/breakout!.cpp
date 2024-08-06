@@ -29,15 +29,11 @@ int main(){ cin.tie(0)->sync_with_stdio(0); cout.tie(0);
 
     bool chk = true;
 
-    for(int i = 1;i<N+1;i++) {
-        if(chk){
-           if(arr[i]){cout << -1; return 0;} 
-           else chk = false;
-        }
-        else{
-            if(i != N && !arr[i+1]) chk = true;
-        }
+    if(arr[1]) {cout << -1; return 0;}
 
+    for(int i = 1;i<N;i++) {
+        if(!(!arr[i+1] || arr[i+1] == arr[i] + 1)) {cout << -1; return 0;}
+        
         if(!arr[i]) mn++;
     }
     cout << mn << ' ' << mx;
